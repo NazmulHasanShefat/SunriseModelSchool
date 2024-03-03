@@ -2,6 +2,7 @@ let navmanu = document.querySelector(".nav-list");
 let togglebtn = document.querySelector(".toggle-btn");
 let mybars = document.querySelector(".bar");
 let toggleSubmanu = document.querySelector("#sublist-manu-1");
+let toggleSubmanu2 = document.querySelector("#sublist-manu-2");
 let submanu = document.querySelector(".sub-list");
  
 togglebtn.addEventListener("click", () => {

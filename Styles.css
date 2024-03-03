@@ -44,11 +44,12 @@
     display:flex;
     justify-content:right;
     align-items:center;
+    position: relative;
 }
 .main-nav-list .nav-manu{
     padding:8px 15px;
 }
-.main-nav-list .nav-manu a{
+.main-nav-list .nav-manu .manu-link{
     text-decoration:none;
     color:#fff;
     font-size:1.2rem;
@@ -57,9 +58,56 @@
 .active{
     background-color:rebeccapurple;
 }
-.main-nav-list .nav-manu a:hover{
+.main-nav-list .nav-manu .manu-link:hover{
     background-color: rebeccapurple;
 }
+/* style submanu */
+.sub-list{
+    display: block;
+    position: absolute;
+    width: 106px;
+    height: 0;
+    background-color: rebeccapurple;
+    top:50px;
+    left:364px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.submanu{
+    margin-top: 10px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    
+}
+.sublink{
+    color:#fff;
+    text-decoration:none;
+    font-size:1.1rem;
+    display: block;
+    padding: 5px 0;
+}
+.submanu .sublink:hover{
+    background-color: blueviolet;
+}
+@media screen and (min-width:998px) {
+    #sublist-manu-1:hover > .sub-list{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: painted;
+    height: 103px;
+}
+}
+.openSubmanu-all{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: painted;
+    height: 103px;
+}
+
 
 @media screen and (max-width:992px) {
     .main-nav-list .nav-manu a{
@@ -67,6 +115,12 @@
     }
 }
 @media screen and (max-width:768px) {
+    .sub-list{
+        position: relative;
+        width: 100%;
+        left:0;
+        top:0;
+    }
     .nav-brand {
         position: absolute;
         width: 91%;
@@ -130,14 +184,15 @@
         transform: translateX(150px);
     }
     .main-nav-list{
-        height:29vh;
+        height:max-content;
         width:100%;
         display: block;
         background-color:blueviolet;
         text-align: center;
     }
-    .main-nav-list .nav-manu {
+    .main-nav-list .nav-manu{
         border-bottom: 0.7px solid rgba(255, 255, 255, 0.301);
+        text-align: center;
     }
 }
 @media screen and (max-width:600px) {
@@ -150,16 +205,16 @@
         top:60px;
     }
     .main-nav-list {
-        height: 31vh;
+        height: max-content;
         width: 77%;
         display: block;
         background-color: blueviolet;
         text-align: center;
     }
-    .main-nav-list .nav-manu a{
-        padding: 8px 100px;
+    .main-nav-list .nav-manu .manu-link{
+        padding: 8px 89px;
     }
-    .main-nav-list .nav-manu a:hover{
+    .main-nav-list .nav-manu .manu-link:hover{
       background-color: rebeccapurple;
     }
 }

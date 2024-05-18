@@ -386,6 +386,12 @@
     border:3px solid blue;
     color:#fff;
     border-radius:30px;
+    transition:.5s;
+    cursor: pointer;
+}
+.about-card:hover{
+    color:black;
+    background-color: #fff;
 }
 .card-logo{
     width: 100%;

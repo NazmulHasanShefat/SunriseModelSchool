@@ -85,6 +85,8 @@
     background-color: rebeccapurple;
     top:56px;
     left:454px;
+    left:63%;
+    transform: translateX(-63%);
     z-index: 1;
     opacity: 0;
     visibility: hidden;
